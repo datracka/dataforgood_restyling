@@ -5,6 +5,10 @@ Template[getTemplate('postContent')].helpers({
   postMeta: function () {
     return postMeta;
   },
+  postCategoriesLabel: function () {
+    return postCategoriesLabel;
+  },
+
   getTemplate: function () {
     return getTemplate(this.template);
   },

@@ -4,7 +4,8 @@
 				,"modules/headlines"
 				,"modules/text"
 				,"modules/buttons"
-                ,"modules/wells";
+                ,"modules/wells"
+                ,"modules/labels";
 
 @mixin modules {
 	
@@ -14,4 +15,5 @@
 		@include textsModule;
 		@include buttonsModule;
         @include wellsModule;
+        @include labelsModule;
 }

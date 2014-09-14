@@ -22,6 +22,7 @@ Package.on_use(function (api) {
     'postModules',
     'postHeading',
     'postMeta',
+    'postCategoriesLabel', //vicens 20140914
     'modulePositions',
 
     'postSubmitRenderedCallbacks',

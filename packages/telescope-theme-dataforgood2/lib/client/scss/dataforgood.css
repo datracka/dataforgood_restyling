@@ -3,7 +3,7 @@
 /* layouts */
 /* lyout scaffold for root elements, navbar, header and jumbotron */
 /* layout scaffold for posts */
-.h2, .font-text-paragraph, .font-text-input, .font-text-claim, .font-text-post-body, .font-text-post-categories {
+.h2, .font-text-paragraph, .font-text-input, .font-text-claim, .font-text-post-body, .font-text-post-categories, .font-text-post-nav-categories, .font-text-small, .font-text-small-white {
   font-family: "futura-pt",sans-serif;
   font-style: normal;
   font-weight: 400; }
@@ -59,7 +59,8 @@ html, body, header {
   -o-background-size: cover;
   background-image: url("/img/jumbotron.jpg");
   height: 37.5rem;
-  position: relative; }
+  position: relative;
+  margin-bottom: 0px; }
   @media (max-width: 320px) {
     .customtron .claim {
       display: none; } }
@@ -94,7 +95,8 @@ html, body, header {
       margin-top: -175px; } }
 
 .post-container {
-  background-color: #f6f6f6; }
+  background-color: #f6f6f6;
+  padding-top: 3rem; }
 
 .vote-container {
   display: inline-block;
@@ -133,6 +135,19 @@ html, body, header {
   background-color: #d2d2d2; }
   .post-categories .selected {
     background-color: #f49600; }
+
+.icon {
+  font-size: 3rem;
+  text-decoration: none;
+  color: #8cc2d9; }
+
+.comments-text {
+  display: inline; }
+
+.comments-number {
+  position: absolute;
+  top: 25%;
+  left: 40%; }
 
 .lnk {
   display: inline-block;
@@ -237,7 +252,19 @@ input[type="tel"], input[type="color"], .uneditable-input {
   color: #3c3c3c; }
 
 .font-text-post-categories {
+  font-size: 16px;
+  color: white; }
+
+.font-text-post-nav-categories {
   font-size: 20px;
+  color: white; }
+
+.font-text-small {
+  font-size: 16px;
+  color: #3c3c3c; }
+
+.font-text-small-white {
+  font-size: 16px;
   color: white; }
 
 .btn_post {
@@ -272,6 +299,16 @@ input[type="tel"], input[type="color"], .uneditable-input {
 .well {
   background-color: white;
   border-radius: 0; }
+
+.post-category-label {
+  width: 8rem;
+  display: inline-block;
+  text-align: center;
+  background-color: #d2d2d2;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem; }
+  .post-category-label.active {
+    background-color: #f49600; }
 
 .navbar.center .navbar-inner {
   text-align: center; }

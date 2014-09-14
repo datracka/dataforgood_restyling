@@ -4,6 +4,7 @@
 
   .post-container {
     background-color: $grey-lighter;
+    padding-top:3rem;
   }
 
   .vote-container {
@@ -52,7 +53,23 @@
     background-color: $grey;
   & .selected {
     background-color: $orange;
+    }
   }
+
+  .icon {
+    font-size:3rem;
+    text-decoration:none;
+    color: $blue-light;
+  }
+
+  .comments-text {
+    display:inline;
+  }
+
+  .comments-number {
+    position: absolute;
+    top: 25%;
+    left: 40%;
   }
 
 }

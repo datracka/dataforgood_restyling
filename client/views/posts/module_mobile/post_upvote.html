@@ -1,0 +1,8 @@
+<template name="posts_upvote_mobile">
+    <div class="post-rank font-text-ranking">{{oneBasedRank}}</div>
+    {{#if upvoted}}
+    <span class="vote-container"><i class="icon-star glyphicon glyphicon-star-empty voted"></i></span>
+    {{else}}
+    <span><a class="upvote-link" href="#"><i class="icon-star glyphicon glyphicon-star-empty not-voted"></i></a></span>
+    {{/if}}
+</template>

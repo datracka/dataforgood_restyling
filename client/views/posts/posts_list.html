@@ -13,28 +13,30 @@
         <p class="font-text-claim claim">Learn more on how to work with our database and become a partner.<br/> No matter if you are from press, organization or private. Share it, love it, use it!</p>
     </div>
   </section>
-<!--<section class="nav hidden-xs" role="navigation">-->
-    <!--<div class="container text-left">-->
-        <!--<ul class="nav navbar-nav navbar-left">-->
-            <!--<li class="active"><a href="#">Top</a></li>-->
-            <!--<li><a href="#">New</a></li>-->
-            <!--<li><a href="#">Best</a></li>-->
-            <!--<li><a href="#">Diggest</a></li>-->
-        <!--</ul>-->
-        <!--<ul class="nav navbar-nav navbar-right">-->
-            <!--<li class="dropdown">-->
-                <!--<a class="dropdown-toggle" data-toggle="dropdown" href="#">-->
-                    <!--Categories <span class="caret"></span>-->
-                <!--</a>-->
-                <!--<ul class="dropdown-menu" role="menu">-->
-                    <!--<li><a href="#">Category 1</a></li>-->
-                    <!--<li><a href="#">Category 2</a></li>-->
-                    <!--<li><a href="#">Category 3</a></li>-->
-                <!--</ul>-->
-            <!--</li>-->
-        <!--</ul>-->
-    <!--</div>&lt;!&ndash; /.container &ndash;&gt;-->
-<!--</section>-->
+<!-- TODO Categories / labels it is managed by module Telescope-tags. At the moment here is hardcoded -->
+<section class="nav hidden-xs" role="navigation" style=" background-color: lightgray;">
+    <div class="container text-left">
+        <ul class="nav navbar-nav navbar-left font-text-post-nav-categories" >
+            <li class="active"><a href="#">Top</a></li>
+            <li><a href="#" style="color: dimgrey;">New</a></li>
+            <li><a href="#" style="color: dimgrey;">Best</a></li>
+            <li><a href="#" style="color: dimgrey;">Diggest</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+                <a class="dropdown-toggle  font-text-post-nav-categories" data-toggle="dropdown" href="#" style="color: dimgrey;">
+                    Categories <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu font-text-post-nav-categories" role="menu">
+                    <li><a href="#">Category 1</a></li>
+                    <li><a href="#">Category 2</a></li>
+                    <li><a href="#">Category 3</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div><!-- /.container -->
+</section>
+<!-- end hardcoded section -->
 <section role="content" class="post-container">
     <div class="container">
         {{#each posts}}

@@ -107,6 +107,7 @@ postModules = [
     template: 'postContent', 
     position: 'center-center'
   },
+
   {
     template: 'postDiscuss',
     position: 'right-right'
@@ -137,6 +138,13 @@ postMeta = [
     template: 'postAdmin', 
     order: 5
   }
+]
+
+postCategoriesLabel = [
+    {
+        template: 'postCategoriesLabel',
+        order: 1
+    }
 ]
 // ------------------------------ Callbacks ------------------------------ //
 

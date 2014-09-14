@@ -1,0 +1,16 @@
+
+@mixin labelsModule {
+
+  .post-category-label {
+    width: 8rem;
+    display: inline-block;
+    text-align: center;
+    background-color: $grey;
+    margin-top:0.5rem;
+    margin-bottom:0.5rem;
+
+    &.active  {
+      background-color: $orange;
+    }
+  }
+}

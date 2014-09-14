@@ -61,7 +61,25 @@
 
     .font-text-post-categories {
       @extend %futura-pt-book;
+      font-size: $fontSizeXL;
+      color: white;
+    }
+
+    .font-text-post-nav-categories {
+      @extend %futura-pt-book;
       font-size: $fontSizeXXL;
+      color: white;
+    }
+
+    .font-text-small {
+      @extend %futura-pt-book;
+      font-size: $fontSizeXL;
+      color: $grey-dark;
+    }
+
+    .font-text-small-white {
+      @extend %futura-pt-book;
+      font-size: $fontSizeXL;
       color: white;
     }
 

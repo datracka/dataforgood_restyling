@@ -4,7 +4,7 @@
 /* lyout scaffold for root elements, navbar, header and jumbotron */
 /* layout scaffold for posts */
 /* line 15, ../scss/abstracts/_fonts.scss */
-.h2, .font-text-paragraph, .font-text-input, .font-text-claim, .font-text-post-body, .font-text-post-categories {
+.h2, .font-text-paragraph, .font-text-input, .font-text-claim, .font-text-post-body, .font-text-post-categories, .font-text-post-nav-categories, .font-text-small, .font-text-small-white {
   font-family: "futura-pt",sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -88,22 +88,23 @@ html, body, header {
   background-image: url("/img/jumbotron.jpg");
   height: 37.5rem;
   position: relative;
+  margin-bottom: 0px;
 }
 @media (max-width: 320px) {
-  /* line 47, ../scss/layouts/_scaffold.scss */
+  /* line 48, ../scss/layouts/_scaffold.scss */
   .customtron .claim {
     display: none;
   }
 }
 
-/* line 54, ../scss/layouts/_scaffold.scss */
+/* line 55, ../scss/layouts/_scaffold.scss */
 .claim_container {
   position: absolute;
   height: 350px;
   left: 0;
 }
 @media (min-width: 600px) {
-  /* line 54, ../scss/layouts/_scaffold.scss */
+  /* line 55, ../scss/layouts/_scaffold.scss */
   .claim_container {
     left: 50%;
     top: 50%;
@@ -112,7 +113,7 @@ html, body, header {
   }
 }
 @media (min-width: 768px) {
-  /* line 54, ../scss/layouts/_scaffold.scss */
+  /* line 55, ../scss/layouts/_scaffold.scss */
   .claim_container {
     margin-left: -375px;
     left: 50%;
@@ -121,7 +122,7 @@ html, body, header {
   }
 }
 @media (min-width: 992px) {
-  /* line 54, ../scss/layouts/_scaffold.scss */
+  /* line 55, ../scss/layouts/_scaffold.scss */
   .claim_container {
     margin-left: -485px;
     left: 50%;
@@ -130,7 +131,7 @@ html, body, header {
   }
 }
 @media (min-width: 1200px) {
-  /* line 54, ../scss/layouts/_scaffold.scss */
+  /* line 55, ../scss/layouts/_scaffold.scss */
   .claim_container {
     margin-left: -585px;
     left: 50%;
@@ -142,66 +143,86 @@ html, body, header {
 /* line 5, ../scss/layouts/_posts.scss */
 .post-container {
   background-color: #f6f6f6;
+  padding-top: 3rem;
 }
 
-/* line 9, ../scss/layouts/_posts.scss */
+/* line 10, ../scss/layouts/_posts.scss */
 .vote-container {
   display: inline-block;
   vertical-align: middle;
 }
 
-/* line 14, ../scss/layouts/_posts.scss */
+/* line 15, ../scss/layouts/_posts.scss */
 .icon-star {
   font-size: 3rem;
   vertical-align: middle;
   color: black;
 }
-/* line 18, ../scss/layouts/_posts.scss */
+/* line 19, ../scss/layouts/_posts.scss */
 .icon-star.voted {
   color: #8cc2d9;
   content: "\e006";
 }
-/* line 22, ../scss/layouts/_posts.scss */
+/* line 23, ../scss/layouts/_posts.scss */
 .icon-star.not-voted {
   color: #8cc2d9;
   content: "\e007";
 }
 
-/* line 28, ../scss/layouts/_posts.scss */
+/* line 29, ../scss/layouts/_posts.scss */
 .post-rank {
   font-size: 2rem;
   display: inline-block;
   vertical-align: middle;
 }
 
-/* line 34, ../scss/layouts/_posts.scss */
+/* line 35, ../scss/layouts/_posts.scss */
 .post-title {
   display: block;
 }
 
-/* line 38, ../scss/layouts/_posts.scss */
+/* line 39, ../scss/layouts/_posts.scss */
 .post-body {
   display: block;
 }
 
-/* line 42, ../scss/layouts/_posts.scss */
+/* line 43, ../scss/layouts/_posts.scss */
 .post-domain {
   display: inline-block;
 }
 
-/* line 46, ../scss/layouts/_posts.scss */
+/* line 47, ../scss/layouts/_posts.scss */
 .edit-link {
   display: inline-block;
 }
 
-/* line 50, ../scss/layouts/_posts.scss */
+/* line 51, ../scss/layouts/_posts.scss */
 .post-categories {
   display: block;
   background-color: #d2d2d2;
 }
-/* line 53, ../scss/layouts/_posts.scss */
+/* line 54, ../scss/layouts/_posts.scss */
 .post-categories .selected {
   background-color: #f49600;
+}
+
+/* line 59, ../scss/layouts/_posts.scss */
+.icon {
+  font-size: 3rem;
+  text-decoration: none;
+  color: #8cc2d9;
+}
+
+/* line 65, ../scss/layouts/_posts.scss */
+.comments-text {
+  display: inline;
+}
+
+/* line 69, ../scss/layouts/_posts.scss */
+.comments-number {
+  position: absolute;
+  top: 25%;
+  left: 40%;
 }
 
 /* line 3, ../scss/modules/_links.scss */
@@ -354,7 +375,25 @@ input[type="tel"].placeholder, input[type="color"].placeholder, .uneditable-inpu
 
 /* line 62, ../scss/modules/_text.scss */
 .font-text-post-categories {
+  font-size: 16px;
+  color: white;
+}
+
+/* line 68, ../scss/modules/_text.scss */
+.font-text-post-nav-categories {
   font-size: 20px;
+  color: white;
+}
+
+/* line 74, ../scss/modules/_text.scss */
+.font-text-small {
+  font-size: 16px;
+  color: #3c3c3c;
+}
+
+/* line 80, ../scss/modules/_text.scss */
+.font-text-small-white {
+  font-size: 16px;
   color: white;
 }
 
@@ -395,6 +434,20 @@ input[type="tel"].placeholder, input[type="color"].placeholder, .uneditable-inpu
 .well {
   background-color: white;
   border-radius: 0;
+}
+
+/* line 4, ../scss/modules/_labels.scss */
+.post-category-label {
+  width: 8rem;
+  display: inline-block;
+  text-align: center;
+  background-color: #d2d2d2;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+/* line 12, ../scss/modules/_labels.scss */
+.post-category-label.active {
+  background-color: #f49600;
 }
 
 /* line 12, ../scss/dataforgood.scss */

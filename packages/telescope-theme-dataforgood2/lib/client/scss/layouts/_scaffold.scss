@@ -43,6 +43,7 @@
 		background-image: url('/img/jumbotron.jpg');
 		height: 37.5rem;
 		position: relative;
+        margin-bottom:0px;
 
         & .claim {
           @media (max-width: 320px) {

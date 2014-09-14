@@ -1,34 +1,39 @@
 <template name="post_item">
   <article class="well post module {{rankClass}} {{#if sticky}}sticky{{/if}} {{inactiveClass}} {{_id}}">
            <!-- mobile devices -->
-           <div class="row visible-xs-block">
-               <div class="col-xs-2">*</div>
-               <div class="col-xs-8">title</div>
-               <div class="col-xs-2">more</div>
+           <div class="row visible-xs-block" style="">
+               <div class="col-xs-2">
+                   {{#each [postUpVoteModule]}}
+                        {{> UI.dynamic template=getTemplate data=..}}
+                   {{/each}}
+               </div>
+               <div class="col-xs-8">
+                   {{#each [postContentModule]}}
+                        {{> UI.dynamic template=getTemplate data=..}}
+                   {{/each}}
+               </div>
+               <div class="col-xs-2">
+                   {{#each [postMoreModule]}}
+                   {{> UI.dynamic template=getTemplate data=..}}
+                   {{/each}}
+               </div>
                 <!-- todo: share on bottom -->
            </div>
            <!-- desktop devices -->
            <div class="row hidden-xs v-middle">
-                  <!-- left modules (base.js): post_upvote.html-->
-                  {{#each leftPostModules}}
-                  <div class="{{moduleClass}} col-sm-1 v-middle-child-col">
-                      {{> UI.dynamic template=getTemplate data=..}}
-                  </div>
-                  {{/each}}
-               <!-- content -->
-               <div class="col-sm-8 v-middle-child-col">
-                   <!-- centerPostmodules (base.js): post_content.html / post_title.html / post_meta.html / post_domain.html / post_admin.html -->
+              <!-- left modules (base.js): post_upvote.html-->
+               {{#each leftPostModules}}
+                  {{> UI.dynamic template=getTemplate data=..}}
+               {{/each}}
+               <!-- centerPostmodules (base.js): post_content.html / post_title.html / post_meta.html / post_domain.html / post_admin.html -->
                {{#each centerPostModules}}
                      {{> UI.dynamic template=getTemplate data=..}}
                {{/each}}
-               </div>
-
-               <!-- TODO right Module is broken fix it!!! -->
+               <!-- post_discuss.html -->
                {{#each rightPostModules}}
                     {{> UI.dynamic template=getTemplate data=..}}
                {{/each}}
-
-                   <!-- todo: share as popup -->
+              <!-- todo: share as popup -->
            </div>
         </article>
 </template>
